@@ -1415,6 +1415,34 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2607917932188694690, guid: 15705ae03da96c64997d6df848bcfdc3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607917932188694690, guid: 15705ae03da96c64997d6df848bcfdc3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607917932188694690, guid: 15705ae03da96c64997d6df848bcfdc3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607917932188694690, guid: 15705ae03da96c64997d6df848bcfdc3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607917932188694690, guid: 15705ae03da96c64997d6df848bcfdc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607917932188694690, guid: 15705ae03da96c64997d6df848bcfdc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607917932188694690, guid: 15705ae03da96c64997d6df848bcfdc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3514908506463018310, guid: 15705ae03da96c64997d6df848bcfdc3, type: 3}
       propertyPath: m_Name
       value: Personagem
