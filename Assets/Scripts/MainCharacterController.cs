@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         anim.SetBool("isRunning", Mathf.Abs(moveInput) > 0.1f && isGrounded);
+        anim.SetBool("isJumping",!isGrounded);
         if (moveInput > 0.01f)
             visual.localScale = new Vector3(4,4,4);
         else if (moveInput < -0.01f)
