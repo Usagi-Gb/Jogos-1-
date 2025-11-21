@@ -23,3 +23,10 @@ void Start() {
     }
     SetTargetWaypoint(currentWaypointIndex);
 }
+void FixedUpdate(){
+    MoveTowardsWaypoint();
+    CheckIfWaypointReached();
+}
+void SetTargetWaypoint(int index){
+    
+}
