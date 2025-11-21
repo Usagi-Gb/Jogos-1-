@@ -7,7 +7,7 @@ public class EnemyWaypointMoviment : MonoBehaviour
     public List<Transform> Waipoints;
     [Header("Moviment Settings")]
     public float moveSpeed = 3f;
-    public float waipointReachedDistance = 0.1f;
+    public float waypointReachedDistance = 0.1f;
     public bool loop = true;
 
     private Rigidbody2D rg;
@@ -16,7 +16,10 @@ public class EnemyWaypointMoviment : MonoBehaviour
 }
 void Start() {
     rb = GetComponent<Rigidbody2D>();
-    if(waipoint == null || waipoint.Count == 0){
-        Debug.LogError
+    if(waypoint == null || waypoint.Count == 0){
+        Debug.LogError("No waypoints assigned to the enemy!");
+        enabled = false;
+        return;
     }
+    SetTargetWaypoint(currentWaypointIndex);
 }
