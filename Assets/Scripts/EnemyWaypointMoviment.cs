@@ -28,5 +28,6 @@ void FixedUpdate(){
     CheckIfWaypointReached();
 }
 void SetTargetWaypoint(int index){
+    if (waypoint.Count == 0) return;
     
 }
