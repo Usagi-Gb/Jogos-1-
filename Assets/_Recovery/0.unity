@@ -238,7 +238,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 842868303}
@@ -301,7 +301,7 @@ Transform:
   m_GameObject: {fileID: 295566415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -0.77, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.9, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Camera2DFollow
   target: {fileID: 842868303}
-  smoothTime: 0.3
+  smoothTime: 0.015
   offset: {x: 0, y: 2, z: -10}
 --- !u!4 &546135519 stripped
 Transform:
@@ -562,7 +562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607324186}
   - component: {fileID: 607324187}
-  m_Layer: 6
+  m_Layer: 1
   m_Name: Visual
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -739,6 +739,7 @@ GameObject:
   - component: {fileID: 842868304}
   - component: {fileID: 842868306}
   - component: {fileID: 842868305}
+  - component: {fileID: 842868307}
   m_Layer: 0
   m_Name: Personagem
   m_TagString: Player
@@ -814,7 +815,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.28, y: -3.54, z: 0}
-  m_LocalScale: {x: 0.975, y: 0.975, z: 0.975}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 262958433}
@@ -914,6 +915,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &842868307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842868301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45439573ef82d0d48b084ce75c975281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 100
+  currentHealth: 0
 --- !u!1001 &858508136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1295,6 +1310,7 @@ GameObject:
   - component: {fileID: 1507161229}
   - component: {fileID: 1507161231}
   - component: {fileID: 1507161230}
+  - component: {fileID: 1507161232}
   m_Layer: 0
   m_Name: Inimigos
   m_TagString: Untagged
@@ -1391,6 +1407,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1507161232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507161228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8bfe4fe71a31fa4ab31355fe79964ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CAguei
+  waypoints: []
+  moveSpeed: 3
+  waypointReachedDistance: 0.1
+  loop: 1
+  visual: {fileID: 0}
+  damage: 10
+  attackCooldown: 1
+  knockbackForce: 15
 --- !u!1001 &1623369774
 PrefabInstance:
   m_ObjectHideFlags: 0
