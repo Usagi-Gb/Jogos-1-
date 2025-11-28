@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class CAguei : MonoBehaviour
+public class EnemyWaypointMovement : MonoBehaviour
 {
     [Header("Waypoints")]
     public List<Transform> waypoints;
@@ -56,11 +56,11 @@ public class CAguei : MonoBehaviour
 
         if(movementDirection.x > 0.1)
         {
-            visual.localScale = new Vector3(1, 1, 1);
+            visual.localScale = new Vector3(2, 2, 1);
         }
         else
         {
-            visual.localScale = new Vector3(-1, 1, 1);
+            visual.localScale = new Vector3(-2, 2, 1);
         }
     }
 

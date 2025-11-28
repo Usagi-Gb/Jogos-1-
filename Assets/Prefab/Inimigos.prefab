@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1148871815942337194}
   - component: {fileID: 8797056953020820528}
   m_Layer: 0
-  m_Name: Visual
+  m_Name: visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1585750318372802156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -0.50000024, z: 0}
+  m_LocalPosition: {x: -0.05, y: 0.36, z: 0}
   m_LocalScale: {x: 5, y: 6.8824, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5917235650308586698, guid: 909f4cde5e9479c41bdd5abcbcbec8c2, type: 3}
+  m_Sprite: {fileID: 7166236263522030466, guid: 272eb2622c305c547a4ddf0651ec61aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 1282208896004349045}
   - component: {fileID: 5388782194623343135}
   - component: {fileID: 3019925924835545884}
-  - component: {fileID: 5904916616200768467}
+  - component: {fileID: 5426247014832071746}
   m_Layer: 0
   m_Name: Inimigos
   m_TagString: Untagged
@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 5742479062579607226}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.05, y: -3.43, z: 0}
+  m_LocalPosition: {x: 17.94, y: -3.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -198,7 +198,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5904916616200768467
+--- !u!114 &5426247014832071746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,14 +207,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5742479062579607226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8bfe4fe71a31fa4ab31355fe79964ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e8fd82968c37164c95b401a70e64fac, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CAguei
-  waypoints: []
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyWaypointMovement
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
   moveSpeed: 3
-  waypointReachedDistance: 0.1
+  waypointReachedDistance: 1
   loop: 1
-  visual: {fileID: 0}
+  visual: {fileID: 1148871815942337194}
   damage: 10
   attackCooldown: 1
   knockbackForce: 15
