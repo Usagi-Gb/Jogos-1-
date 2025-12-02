@@ -219,4 +219,4 @@ MonoBehaviour:
   visual: {fileID: 1148871815942337194}
   damage: 10
   attackCooldown: 1
-  knockbackForce: 15
+  knockbackForce: 3

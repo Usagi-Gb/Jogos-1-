@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 130583993}
   - component: {fileID: 130583995}
   - component: {fileID: 130583994}
+  - component: {fileID: 130583996}
   m_Layer: 5
   m_Name: barra
   m_TagString: Untagged
@@ -336,14 +337,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.075464964, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -422401362006371055, guid: bf61dd2fcbfba6540a1d0bbe5267af64, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -361,6 +362,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130583992}
   m_CullTransparentMesh: 1
+--- !u!114 &130583996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130583992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59cb6983228c2c498056f658cb6f548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthBar
 --- !u!1 &137580703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,8 +1624,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45439573ef82d0d48b084ce75c975281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
+  healthBar: {fileID: 130583996}
 --- !u!1001 &858508136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1899,8 +1913,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -422401362006371055, guid: bf61dd2fcbfba6540a1d0bbe5267af64, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3338,7 +3352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5426247014832071746, guid: c8b20d8501d1aa143ab01969c3df3b61, type: 3}
       propertyPath: knockbackForce
-      value: 30
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5426247014832071746, guid: c8b20d8501d1aa143ab01969c3df3b61, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
