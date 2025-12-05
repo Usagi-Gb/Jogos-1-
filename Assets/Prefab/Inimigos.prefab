@@ -243,7 +243,7 @@ MonoBehaviour:
   visual: {fileID: 1148871815942337194}
   damage: 10
   attackCooldown: 1
-  knockbackForce: 3
+  knockbackForce: 5
 --- !u!212 &8404362973952836806
 SpriteRenderer:
   m_ObjectHideFlags: 0
