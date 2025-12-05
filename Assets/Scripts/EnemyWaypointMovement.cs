@@ -24,7 +24,8 @@ public class EnemyWaypointMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        if (waypoints == null || waypoints.Count == 0){
+        if (waypoints == null || waypoints.Count == 0)
+        {
             Debug.LogError("No waypoints assigned to the enemy!");
             enabled = false;
             return;
@@ -36,10 +37,11 @@ public class EnemyWaypointMovement : MonoBehaviour
     void FixedUpdate()
     {
         MoveTowardsWaypoint();
-        CheckIfWaypointReached();        
+        CheckIfWaypointReached();
     }
 
-    void SetTargetWaypoint(int index){
+    void SetTargetWaypoint(int index)
+    {
         if (waypoints.Count == 0) return;
 
         currentWaypointIndex = index;
@@ -47,14 +49,15 @@ public class EnemyWaypointMovement : MonoBehaviour
         movementDirection = (targetPosition - (Vector2)transform.position).normalized;
     }
 
-    void MoveTowardsWaypoint(){
+    void MoveTowardsWaypoint()
+    {
         if (waypoints.Count == 0) return;
 
         Vector2 targetPosition = waypoints[currentWaypointIndex].position;
         movementDirection = (targetPosition - (Vector2)transform.position).normalized;
-        rb.linearVelocity = movementDirection * moveSpeed;
+        rb.linearVelocity = new Vector2(movementDirection.x * moveSpeed, rb.linearVelocity.y);
 
-        if(movementDirection.x > 0.1)
+        if (movementDirection.x > 0.1)
         {
             visual.localScale = new Vector3(2, 2, 1);
         }
@@ -64,25 +67,30 @@ public class EnemyWaypointMovement : MonoBehaviour
         }
     }
 
-    void CheckIfWaypointReached(){
+    void CheckIfWaypointReached()
+    {
         if (waypoints.Count == 0) return;
 
         float distanceToWaypoint = Vector2.Distance(transform.position, waypoints[currentWaypointIndex].position);
 
-        if(distanceToWaypoint <= waypointReachedDistance)
+        if (distanceToWaypoint <= waypointReachedDistance)
         {
             GoToNexWaypoint();
         }
     }
 
-    void GoToNexWaypoint(){
+    void GoToNexWaypoint()
+    {
         currentWaypointIndex++;
 
-        if(currentWaypointIndex >= waypoints.Count){
-            if (loop){
+        if (currentWaypointIndex >= waypoints.Count)
+        {
+            if (loop)
+            {
                 currentWaypointIndex = 0;
             }
-            else {
+            else
+            {
                 enabled = false;
                 rb.linearVelocity = Vector2.zero;
                 return;
@@ -120,5 +128,9 @@ public class EnemyWaypointMovement : MonoBehaviour
                 lastAttackTime = Time.time;
             }
         }
+    }
+    public void Jump(float jumpForce)
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 }
