@@ -31,6 +31,9 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player morreu!");
-        gameObject.SetActive(false);
+        {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
     }
 }
