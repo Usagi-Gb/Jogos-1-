@@ -591,11 +591,11 @@ Transform:
   m_GameObject: {fileID: 169770092}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52.46489, y: -5.07773, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.13525474, y: -0.41916773, z: 0}
+  m_LocalScale: {x: 1.0810812, y: 1.0810812, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 396098852}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &169770095
 MonoBehaviour:
@@ -609,7 +609,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418699c24cbeac8418617599516ffa7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TJump
-  jumpForce: 30
+  damage: 0
+  attackCooldown: 1
+  knockbackForce: 20
 --- !u!1001 &199794355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1082,6 +1084,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1708833600}
+  - {fileID: 169770094}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &418616401
@@ -4202,4 +4205,3 @@ SceneRoots:
   - {fileID: 1035985358}
   - {fileID: 643350897}
   - {fileID: 396098852}
-  - {fileID: 169770094}

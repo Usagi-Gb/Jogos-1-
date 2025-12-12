@@ -8,6 +8,14 @@ public class TJump : MonoBehaviour
     public float knockbackForce = 15f;
     private Rigidbody2D rb;
     private float lastAttackTime;
+    public Transform visual;
+    private Animator anim;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        anim = visual.GetComponent<Animator>();
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -28,6 +36,12 @@ public class TJump : MonoBehaviour
                 playerHealth.TakeDamage(damage, knockbackDirection, knockbackForce);
                 lastAttackTime = Time.time;
             }
+        }
+    }
+    void Update(Collision2D collision){
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            anim.isTouching;
         }
     }
 }
