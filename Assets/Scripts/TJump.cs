@@ -1,15 +1,33 @@
 using UnityEngine;
 
 public class TJump : MonoBehaviour
-{
-    public float jumpForce;
-    void OnTriggerEnter2D(Collider2D collsion)
+{   
+    [Header("Combat Settings")]
+    public float damage = 0f;
+    public float attackCooldown = 1f;
+    public float knockbackForce = 15f;
+    private Rigidbody2D rb;
+    private float lastAttackTime;
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collsion.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log(collsion.gameObject.name);
-            collsion.gameObject.SendMessage("Jump", jumpForce);
+            TryAttackPlayer(collision.gameObject);
         }
     }
 
+    void TryAttackPlayer(GameObject player)
+    {
+        if (Time.time >= lastAttackTime + attackCooldown)
+        {
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                Vector2 knockbackDirection = (player.transform.position - transform.position).normalized;
+                playerHealth.TakeDamage(damage, knockbackDirection, knockbackForce);
+                lastAttackTime = Time.time;
+            }
+        }
+    }
 }
